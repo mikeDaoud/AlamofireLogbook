@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'AlamofireLogbook_Example' do
+  pod 'AlamofireLogbook', :path => '../'
+
+  target 'AlamofireLogbook_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
