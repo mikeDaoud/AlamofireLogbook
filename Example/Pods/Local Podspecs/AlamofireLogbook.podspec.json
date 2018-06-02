@@ -1,0 +1,33 @@
+{
+  "name": "AlamofireLogbook",
+  "version": "0.1.0",
+  "summary": "A short description of AlamofireLogbook.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/mikeAttia/AlamofireLogbook",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "mikeAttia": "michael.dawood@vodafone.com"
+  },
+  "source": {
+    "git": "https://github.com/mikeAttia/AlamofireLogbook.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "swift_version": "3.2",
+  "source_files": "AlamofireLogbook/Classes/**/*",
+  "resource_bundles": {
+    "AlamofireLogbook": [
+      "AlamofireLogbook/Assets/*.{storyboard,xib,png}"
+    ]
+  },
+  "dependencies": {
+    "Alamofire": [
+
+    ]
+  }
+}

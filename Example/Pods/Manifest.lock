@@ -1,0 +1,23 @@
+PODS:
+  - Alamofire (4.7.2)
+  - AlamofireLogbook (0.1.0):
+    - Alamofire
+
+DEPENDENCIES:
+  - AlamofireLogbook (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+
+EXTERNAL SOURCES:
+  AlamofireLogbook:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  AlamofireLogbook: 99c064150802b63587890d1e262595adf3882b41
+
+PODFILE CHECKSUM: 8729eabe7d523cc8db633d1c07928aed2bf066ee
+
+COCOAPODS: 1.5.2

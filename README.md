@@ -1,9 +1,9 @@
 # AlamofireLogbook
 
-[![CI Status](https://img.shields.io/travis/mikeAttia/AlamofireLogbook.svg?style=flat)](https://travis-ci.org/mikeAttia/AlamofireLogbook)
+<!--[![CI Status](https://img.shields.io/travis/mikeAttia/AlamofireLogbook.svg?style=flat)](https://travis-ci.org/mikeAttia/AlamofireLogbook)
 [![Version](https://img.shields.io/cocoapods/v/AlamofireLogbook.svg?style=flat)](https://cocoapods.org/pods/AlamofireLogbook)
 [![License](https://img.shields.io/cocoapods/l/AlamofireLogbook.svg?style=flat)](https://cocoapods.org/pods/AlamofireLogbook)
-[![Platform](https://img.shields.io/cocoapods/p/AlamofireLogbook.svg?style=flat)](https://cocoapods.org/pods/AlamofireLogbook)
+[![Platform](https://img.shields.io/cocoapods/p/AlamofireLogbook.svg?style=flat)](https://cocoapods.org/pods/AlamofireLogbook)-->
 
 ## Example
 
@@ -22,7 +22,7 @@ pod 'AlamofireLogbook'
 
 ## Author
 
-mikeAttia, michael.dawood@vodafone.com
+mikeAttia, dr.mike.attia@gmail.com
 
 ## License
 

@@ -20,11 +20,55 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ff-kq-eLs">
+                                <rect key="frame" x="150" y="550" width="75" height="30"/>
+                                <state key="normal" title="Show Logs"/>
+                                <connections>
+                                    <action selector="showLogs:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AHF-ol-flf"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dl9-m2-Wx5">
+                                <rect key="frame" x="20" y="220" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nO1-ed-8RT">
+                                <rect key="frame" x="161" y="266" width="53" height="30"/>
+                                <state key="normal" title="Call API"/>
+                                <connections>
+                                    <action selector="callApi:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dzX-AG-Yu8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqR-Ie-sak">
+                                <rect key="frame" x="133" y="318" width="108" height="30"/>
+                                <state key="normal" title="Call Sample API"/>
+                                <connections>
+                                    <action selector="callSample:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qc9-Qz-cGy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="3ff-kq-eLs" secondAttribute="bottom" constant="87" id="CK6-38-09k"/>
+                            <constraint firstItem="nO1-ed-8RT" firstAttribute="centerX" secondItem="dl9-m2-Wx5" secondAttribute="centerX" id="G9G-g6-iSS"/>
+                            <constraint firstItem="nO1-ed-8RT" firstAttribute="top" secondItem="dl9-m2-Wx5" secondAttribute="bottom" constant="16" id="QjI-Y5-s0r"/>
+                            <constraint firstItem="3ff-kq-eLs" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="WM6-Gc-CTk"/>
+                            <constraint firstItem="dl9-m2-Wx5" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="200" id="i7K-g4-krK"/>
+                            <constraint firstItem="zqR-Ie-sak" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="lTd-UI-puP"/>
+                            <constraint firstItem="zqR-Ie-sak" firstAttribute="top" secondItem="nO1-ed-8RT" secondAttribute="bottom" constant="22" id="oFx-RK-ymb"/>
+                            <constraint firstAttribute="trailing" secondItem="dl9-m2-Wx5" secondAttribute="trailing" constant="20" id="pre-wX-zP6"/>
+                            <constraint firstItem="dl9-m2-Wx5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="vvY-9t-aHc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="urlField" destination="dl9-m2-Wx5" id="qo0-m7-VZ3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
         </scene>
     </scenes>
 </document>
