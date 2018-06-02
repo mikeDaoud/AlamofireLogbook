@@ -39,7 +39,8 @@ class ViewController: UIViewController {
     
     private func call(api: String){
         activityIndicator.startAnimating()
-        Alamofire.request(api).log().responseJSON{ response in
+        let req = Alamofire.request(api).log()
+        req.responseJSON{ response in
             print("Request: \(String(describing: response.request))")
             print("Response: \(String(describing: response.response))")
             print("Result: \(response.result)")
