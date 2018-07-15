@@ -20,7 +20,7 @@ extension Highlightable{
             ranges.append(range)
         }
         ranges.map{return NSRange($0, in: text)}.forEach{
-            attrString.addAttributes([NSBackgroundColorAttributeName: color], range: $0)
+            attrString.addAttributes([NSAttributedStringKey.backgroundColor: color], range: $0)
         }
         self.setHighlightedText(attrString)
     }
