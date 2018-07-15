@@ -9,9 +9,15 @@
 import Foundation
 import Alamofire
 
+public protocol AlamofireLogbookDelegate: class{
+    func recievedResponseFor(item : LogItem)
+}
+
 public class AlamofireLogbook{
     
-    static var shared = AlamofireLogbook()
+    public static var shared = AlamofireLogbook()
+    
+    public weak var delegate: AlamofireLogbookDelegate?
     
     private var responsesQueue:[DataResponse<Data>] = []
     
@@ -19,6 +25,7 @@ public class AlamofireLogbook{
     
     func appendResponse(_ response: DataResponse<Data>){
         responsesQueue.insert(response, at: 0)
+        delegate?.recievedResponseFor(item: LogItem(response: response))
     }
     
     func clearCache(){

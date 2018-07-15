@@ -9,28 +9,42 @@
 import Foundation
 import Alamofire
 
-struct LogItem{
+public struct LogItem: CustomStringConvertible{
     enum ResponseStatus{
         case success, serverFailure, failure
     }
-    private let request: String
+    public let request: String
     let requestDomain: String
     let requestMethod: String
     let requestURL: String
     let requestQueryParams : [String]
-    let requestHeaders: [String : String]
+    public let requestHeaders: [String : String]
     let requestBody: Data?
+    public var requestLoad: String?{
+        guard let reqBody = requestBody,
+            let payload = String(data: reqBody, encoding: .utf8) else {
+            return nil
+        }
+        return payload
+    }
     
     let requestTime: String
     let requestDuration: String
     
-    let responseStatusCode: String
+    public let responseStatusCode: String
     let responseStatus: ResponseStatus
-    let responseHeaders: [String : String]
+    public let responseHeaders: [String : String]
     let responseBody: Data?
+    public var responseLoad: String?{
+        guard let resBody = responseBody,
+            let body = String(data: resBody, encoding: .utf8) else{
+                return nil
+        }
+        return body
+    }
     
-    var description: String{
-        var str = "[REQUEST] : \n \(self.request)\n"
+    public var description: String{
+        var str = "[REQUEST] : \n \(self.requestMethod.uppercased()): \(self.request)\n"
         
         if let reqHeadersData = try? JSONSerialization.data(withJSONObject: requestHeaders, options: .prettyPrinted), let reqHeaders = String(data: reqHeadersData, encoding: .utf8){
             str.append("[REQUEST HEADERS] : \n \(reqHeaders)\n")

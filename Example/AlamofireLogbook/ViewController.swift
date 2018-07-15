@@ -10,12 +10,16 @@ import UIKit
 import Alamofire
 import AlamofireLogbook
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AlamofireLogbookDelegate {
+    func recievedResponseFor(item: LogItem) {
+        print(item)
+    }
     
     private let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        AlamofireLogbook.shared.delegate = self
         activityIndicator.center = CGPoint(x: view.bounds.size.width/2, y: view.bounds.size.height/2)
         activityIndicator.color = UIColor.gray
         view.addSubview(activityIndicator)

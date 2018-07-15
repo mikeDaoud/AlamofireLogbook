@@ -3,8 +3,11 @@ An Alamofire network activity logger view
 
 <!--[![CI Status](https://img.shields.io/travis/mikeAttia/AlamofireLogbook.svg?style=flat)](https://travis-ci.org/mikeAttia/AlamofireLogbook)-->
 [![Version](https://img.shields.io/cocoapods/v/AlamofireLogbook.svg?style=flat)](https://cocoapods.org/pods/AlamofireLogbook)
-[![License](https://img.shields.io/cocoapods/l/AlamofireLogbook.svg?style=flat)](https://cocoapods.org/pods/AlamofireLogbook)
-[![Platform](https://img.shields.io/cocoapods/p/AlamofireLogbook.svg?style=flat)](https://cocoapods.org/pods/AlamofireLogbook)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+[![Platform](https://img.shields.io/cocoapods/p/AlamofireLogbook.svg?style=flat)](https://developer.apple.com/resources/)
+[![Swift Version](https://img.shields.io/badge/swift-4.1-orange.svg?style=flat)](https://swift.org/blog/swift-4-1-released/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
+
 
 ## Installation
 
@@ -25,24 +28,32 @@ import Alamofire
 import AlamofireLogbook
 
 Alamofire
-	.request("https://httpbin.org/get")
-	.log()
-	.responseJSON { response in
-		// Your code
-	}
+.request("https://httpbin.org/get")
+.log()
+.responseJSON { response in
+// Your code
+}
 ```
 
-Then to show the Network activity logs view just call
+If you want to log each request yourself
+1. Conform to `AlamofireLogbookDelegate` 
+2. implement 
+```swift
+recievedResponseFor(item : LogItem)
+```
+3. assign your delegate class in the app delegate to `AlamofireLogbook.shared.delegate`
+
+OR to show the Network activity logs view just call
 
 ```swift
 AlamofireLogbook.show()
 ```
-and you'll get the followoing view
+and you'll get A full searchable log
 
 ![screenshot_01](https://raw.githubusercontent.com/mikeAttia/AlamofireLogbook/master/Screenshots/screenshot_01.png) ![screenshot_02](https://raw.githubusercontent.com/mikeAttia/AlamofireLogbook/master/Screenshots/screenshot_02.png) ![screenshot_03](https://raw.githubusercontent.com/mikeAttia/AlamofireLogbook/master/Screenshots/screenshot_03.png) ![screenshot_04](https://raw.githubusercontent.com/mikeAttia/AlamofireLogbook/master/Screenshots/screenshot_04.png)
 
-####💡 Tip
-Use the action button on the top right of the request details page to copy a readable formatted string of both the request and response. 😉 
+>### 💡Tip
+>Use the action button on the top right of the request details page to copy a readable formatted string of both the request and response. 😉 
 
 
 ## Example
@@ -71,7 +82,7 @@ All contributions are welcome 🤗.
 
 ## Author
 
-mikeAttia, dr.mike.attia@gmail.com
+Built with 💙 by [mikeAttia](https://github.com/mikeAttia)
 
 ## License
 
