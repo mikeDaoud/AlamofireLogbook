@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AlamofireLogbook'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Alamofire network activity logger view'
 
   # s.description      = <<-DESC
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/mikeAttia/AlamofireLogbook.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
-  s.swift_version = '3.2'
+  s.swift_version = '4.1'
 
   s.source_files = 'AlamofireLogbook/Classes/**/*'
   
