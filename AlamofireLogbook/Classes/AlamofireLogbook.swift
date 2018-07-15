@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-public protocol AlamofireLogbookDelegate: class{
+public protocol AlamofireResponseListener: class{
     func recievedResponseFor(item : LogItem)
 }
 
@@ -17,7 +17,7 @@ public class AlamofireLogbook{
     
     public static var shared = AlamofireLogbook()
     
-    public weak var delegate: AlamofireLogbookDelegate?
+    public weak var delegate: AlamofireResponseListener?
     
     private var responsesQueue:[DataResponse<Data>] = []
     

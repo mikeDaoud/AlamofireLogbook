@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import AlamofireLogbook
 
-class ViewController: UIViewController, AlamofireLogbookDelegate {
+class ViewController: UIViewController, AlamofireResponseListener {
     func recievedResponseFor(item: LogItem) {
         print(item)
     }

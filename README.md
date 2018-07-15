@@ -36,7 +36,7 @@ Alamofire
 ```
 
 If you want to log each request yourself
-1. Conform to `AlamofireLogbookDelegate` 
+1. Conform to `AlamofireResponseListener` 
 2. implement 
 ```swift
 recievedResponseFor(item : LogItem)
