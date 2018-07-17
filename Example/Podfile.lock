@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.7.2)
-  - AlamofireLogbook (0.1.0):
+  - AlamofireLogbook (0.1.1):
     - Alamofire
 
 DEPENDENCIES:
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
-  AlamofireLogbook: d1dd9a8906f30296ab9a1e6c8120f8c8556cc693
+  AlamofireLogbook: 294aa31285dd7b72f18185cc8e1771f5dca86158
 
 PODFILE CHECKSUM: 8729eabe7d523cc8db633d1c07928aed2bf066ee
 
